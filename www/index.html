@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Матура БЕЛ</title>
+</head>
+
+<body>
+    
+    <p>Христо Ботев:</p>
+    <select id="botev">
+        <option value="maice">Майце си</option>
+        <option value="brata">Към брата си</option>
+        <option value="elegiq">Елегия</option>
+        <option value="borba">Борба</option>
+        <option value="libe">До моето първо либе</option>
+        <option value="proshtavane">На прощаване</option>
+        <option value="dimityr">Хаджи Димитър</option>
+        <option value="molitva">Моята молитва</option>
+        <option value="obesvaneto">Обесването на Васил Левски</option>
+    </select>
+        <button onclick="botev()">Отиди</button>
+    <p>Иван Вазов:</p>
+    <select id="vazov">
+        <option value="ezik">Българският език</option>
+        <option value="otechestvo">Отечество любезно</option>
+        <option value="manastir">При Рилския манастир</option>
+        <option value="elate">Елате ни вижте</option>
+        <option value="linee">Линее нашто поколение</option>
+        <option value="levski">Левски</option>
+        <option value="paisii">Паисий</option>
+        <option value="kocho">Кочо</option>
+        <option value="opylchencite">Опълченците на Шипка</option>
+        <option value="ioco">Дядо Йоцо гледа</option>
+        <option value="chichovci">Чичовци</option>
+        <option value="igoto">Под игото</option>
+    </select>
+        <button onclick="vazov()">Отиди</button>
+    <p>Алеко Константинов:</p>
+    <select id="konstantinov">
+        <option value="razni">Разни хора, разни идеали</option>
+        <option value="bai">Бай Ганьо</option>
+    </select>
+        <button onclick="konstantinov()">Отиди</button>
+    <p>Пенчо Славейков:</p>
+    <select id="slaveikov">
+        <option value="cis">Cis moll</option>
+        <option value="poleni">Ни лъх не дъхва над полени</option>
+        <option value="ezeroto">Спи езерото</option>
+        <option value="samoten">Самотен гроб в самотен кът</option>
+        <option value="ralica">Ралица</option>
+    </select>
+        <button onclick="slaveikov()">Отиди</button>
+    <p>Пейо Яворов:</p>
+    <select id="qvorov">
+        <option value="gradushka">Градушка</option>
+        <option value="zatochenici">Заточеници</option>
+        <option value="bqlo">Ще бъдеш в бяло</option>
+        <option value="ochi">Две хубави очи</option>
+        <option value="ston">Стон</option>
+        <option value="dushi">Две души</option>
+        <option value="senki">Сенки</option>
+        <option value="pesenta">Песента на човека</option>
+        <option value="maska">Маска</option>
+    </select>
+        <button onclick="qvorov()">Отиди</button>
+    <p>Елин Пелин:</p>
+    <select id="pelin">
+        <option value="melnica">Ветрената мелница</option>
+        <option value="kosachi">Косачи</option>
+        <option value="zadushnica">Задушница</option>
+        <option value="mechtateli">Мечтатели</option>
+        <option value="onq">На оня свят</option>
+        <option value="andreshko">Андрешко</option>
+        <option value="chorba">Чорба от греховете на отец Никодим</option>
+        <option value="kambani">Занемелите камбани</option>
+        <option value="geracite">Гераците</option>
+    </select>
+        <button onclick="pelin()">Отиди</button>
+    <p>Димчо Дебелянов:</p>
+    <select id="debelqnov">
+        <option value="cherna">Черна песен</option>
+        <option value="plovdiv">Пловдив</option>
+        <option value="zavyrnesh">Да се завърнеш...</option>
+        <option value="pomnish">Помниш ли, помниш ли...</option>
+        <option value="gradyt">Спи градът</option>
+        <option value="mig">Миг</option>
+        <option value="ubit">Един убит</option>
+        <option value="sirotna">Сиротна песен</option>
+        <option value="tiha">Тиха победа</option>
+    </select>
+        <button onclick="debelqnov()">Отиди</button>
+    <p>Христо Смирненски:</p>
+    <select id="smirnenski">
+        <option value="den">Да бъде ден!</option>
+        <option value="nii">Ний</option>
+        <option value="iohan">Йохан</option>
+        <option value="unosha">Юноша</option>
+        <option value="muzikant">Стария музикант</option>
+        <option value="cvetarka">Цветарка</option>
+        <option value="vecheri">Зимни вечери</option>
+    </select>
+        <button onclick="smirnenski()">Отиди</button>
+    <p>Гео Милев:</p>
+    <select id="milev">
+        <option value="septemvri">Септември</option>
+    </select>
+        <button onclick="milev()">Отиди</button>
+    <p>Атанас Далчев:</p>
+    <select id="dalchev">
+        <option value="prozorec">Прозорец</option>
+        <option value="bolnica">Болница</option>
+        <option value="staqta">Стаята</option>
+        <option value="kyshtata">Къщата</option>
+        <option value="povest">Повест</option>
+        <option value="knigite">Книгите</option>
+        <option value="kamyk">Камък</option>
+        <option value="dqvolsko">Дяволско</option>
+    </select>
+        <button onclick="dalchev()">Отиди</button>
+    <p>Елисавета Багряна:</p>
+    <select id="bagrqna">
+        <option value="kukuvica">Кукувица</option>
+        <option value="stihii">Стихии</option>
+        <option value="potomka">Потомка</option>
+        <option value="vechnata">Вечната</option>
+    </select>
+        <button onclick="bagrqna()">Отиди</button>
+    <p>Йордан Йовков:</p>
+    <select id="iovkov">
+        <option value="koleletata">Песента на колелетата</option>
+        <option value="radost">Последна радост</option>
+        <option value="shibil">Шибил</option>
+        <option value="chumavoto">През чумавото</option>
+        <option value="indje">Индже</option>
+        <option value="albena">Албена</option>
+        <option value="drugoselec">Другоселец</option>
+        <option value="serafim">Серафим</option>
+    </select>
+        <button onclick="iovkov()">Отиди</button>
+    <p>Никола Вапцаров:</p>
+    <select id="vapcarov">
+        <option value="vqra">Вяра</option>
+        <option value="pismo">Писмо(Ти помниш ли)</option>
+        <option value="pesen">Песен за човека</option>
+        <option value="syn">Сън</option>
+        <option value="istoriq">История</option>
+        <option value="zavod">Завод</option>
+        <option value="kino">Кино</option>
+        <option value="proshtalno">Прощално</option>
+        <option value="jestoka">Борбата е безмилостно жестока</option>
+    </select>
+        <button onclick="vapcarov()">Отиди</button>
+    <p>Димитър Димов:</p>
+    <select id="dimov">
+        <option value="tutun">Тютюн</option>
+    </select>
+        <button onclick="dimov()">Отиди</button>
+    <p>Димитър Талев:</p>
+    <select id="talev">
+        <option value="svetilnik">Железният светилник</option>
+    </select>
+    <button onclick="talev()">Отиди</button>
+    
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
